@@ -83,12 +83,19 @@ class App extends Component {
             <main>
                 <figure>
                     <img className="show" src={this.state.on} alt="" />
+<<<<<<< HEAD
                     <img
                         className="tv"
                         src="/tv.png"
                         alt=""
                         onClick={this.turnTvCambio}
                     />
+=======
+
+                    <button type="button" className="tv-button">
+                        <img className="tv" src="/tv.png" alt="" />
+                    </button>
+>>>>>>> 83139a45cb89921a097a9ff659ba8a3dd6de676f
                 </figure>
 
                 <button type="button" onClick={this.turnTvOn}>
