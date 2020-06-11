@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import moon from './img/moon.svg';
 import sun from './img/sun.svg';
 
 import './style.css';
 
-const App = () => (
-    <main className="night day">
-        <label className="toggle" htmlFor="dabox">
-            <input type="checkbox" id="dabox" />
-            <span className="slider" />
-        </label>
-        <img src={sun} alt="Sun" />
-        <img src={moon} alt="Moon" />
+class App extends Component {
+    state = {
+        visible: true,
+    };
 
-        <h2>zZzZzZz...</h2>
-    </main>
-);
+    render() {
+        return (
+            <div className="App">
+                {this.state.visible ? sun : moon}
+                <button
+                    type="button"
+                    onClick={() => {
+                        this.setState({ visible: false });
+                    }}
+                >
+                    hide
+                </button>
+            </div>
+        );
+    }
+}
 
 export default App;
