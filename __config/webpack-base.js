@@ -85,7 +85,6 @@ const config = {
                 exclude: /node_modules/,
                 loader: 'eslint-loader',
                 options: {
-                    cache: true,
                     configFile: '.eslintrc',
                     failOn: false,
                     fix: true,
@@ -98,7 +97,6 @@ const config = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
-                    cacheDirectory: true,
                     presets: ['@babel/preset-react'],
                     plugins: [
                         'react-hot-loader/babel',
