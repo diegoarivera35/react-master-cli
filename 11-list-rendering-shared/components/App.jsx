@@ -13,6 +13,7 @@ class App extends Component {
 
     changeMovieStatus = () => {
         // Aquí le podemos dar like/dislike a una pelicula
+        this.state.movies 
     };
 
     changeAllMovieStatuses = () => {
@@ -38,20 +39,43 @@ class App extends Component {
                         <img src={dislike} alt="Vote down all" />
                     </button>
                 </header>
+
+
+
                 <h2>
                     <span>Liked</span>
                 </h2>
                 {/* Aqui queremos las que status === "like" */}
                 <ul>
                     {this.state.movies.map((movie) => (
-                        <Movie key={movie.name} />
+                        <Movie key={movie.name}
+                        name={movie.name}
+                        cover={movie.cover}
+                        year={movie.year}
+                        description={movie.description}
+                        score={movie.score}
+                        status={movie.status}
+                        />
                     ))}
                 </ul>
+
+
+
                 <hr />
+
+
+
+
                 {/* Aqui queremos las que status === "" */}
                 <ul>
                     {this.state.movies.map((movie) => (
-                        <Movie key={movie.name} />
+                        <Movie key={movie.name}
+                        name={movie.name}
+                        cover={movie.cover}
+                        year={movie.year}
+                        description={movie.description}
+                        score={movie.score}
+                        status={movie.status} />
                     ))}
                 </ul>
 
@@ -61,7 +85,13 @@ class App extends Component {
                 {/* Aqui queremos las que status === "dislike" */}
                 <ul>
                     {this.state.movies.map((movie) => (
-                        <Movie key={movie.name} />
+                        <Movie key={movie.name}
+                        name={movie.name}
+                        cover={movie.cover}
+                        year={movie.year}
+                        description={movie.description}
+                        score={movie.score}
+                        status={movie.status} />
                     ))}
                 </ul>
             </main>
