@@ -13,7 +13,7 @@ import {
 import './style.css';
 
 const NASA_API = 'https://api.nasa.gov/';
-const API_KEY = 'DEMO_KEY';
+const API_KEY = 'api_key=KKl4GTPapcbMVhdamXPmDdRPkGow0OdcwJaoPbNc';
 
 const App = () => (
     <>
